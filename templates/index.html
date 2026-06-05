@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinity AI Auto Animation Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="logo">∞ Infinity AI</div>
+
+        <button class="new-btn" onclick="location.reload()">+ New Creation</button>
+
+        <h3>History</h3>
+        <div id="historyList" class="history-list">
+            <p class="empty">No videos generated yet</p>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <section class="hero">
+            <div>
+                <h1>Auto Anime Video Generator</h1>
+                <p>Upload an image. The system detects the best effect and creates a cinematic video.</p>
+            </div>
+
+            <span class="badge">InfinityInvinciple Project</span>
+        </section>
+
+        <section class="features">
+            <div>🔥 Auto Fire</div>
+            <div>💧 Auto Water</div>
+            <div>🌪 Auto Wind</div>
+            <div>⚡ Auto Lightning</div>
+            <div>❄ Auto Ice</div>
+            <div>🌑 Auto Dark</div>
+        </section>
+
+        <section class="studio">
+
+            <div class="panel">
+                <h2>Create Auto Animation</h2>
+
+                <label for="imageInput" class="upload-box">
+                    <div class="upload-icon">🖼️</div>
+                    <h3>Upload Anime Image</h3>
+                    <p>JPG, JPEG, PNG supported</p>
+                </label>
+
+                <input type="file" id="imageInput" accept="image/*" hidden>
+
+                <img id="previewImage">
+
+                <textarea id="promptBox" placeholder="Optional: Describe your scene ..."></textarea>
+
+                <div class="auto-box">
+                    <strong>Auto Mode Enabled</strong>
+                    <p>The app detects the image color and applies the best animation effect.</p>
+                </div>
+
+                <button class="generate-btn" onclick="generateVideo()">Generate Auto Video</button>
+
+                <div id="loading"></div>
+            </div>
+
+            <div class="panel">
+                <h2>Video Preview</h2>
+
+                <div class="video-box">
+                    <video id="videoPlayer" controls></video>
+                    <p id="placeholder">Your generated video appears here</p>
+                </div>
+
+                <div id="detectedEffect"></div>
+
+                <a id="downloadBtn" download>Download Video</a>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
