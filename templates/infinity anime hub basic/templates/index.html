@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Infinity Anime Hub</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="hero">
+    <nav>
+        <h2>∞ Infinity Anime Hub</h2>
+        <a href="/">Home</a>
+    </nav>
+
+    <div class="hero-content">
+        <h1>Discover Your Favorite Anime</h1>
+        <p>Search anime, explore details, ratings, genres, trailers and more.</p>
+
+        <form action="/search" method="get" class="search-box">
+            <input type="text" name="q" placeholder="Search anime... One Piece, Naruto, Solo Leveling">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</header>
+
+<section class="container">
+    <h2>Top Anime</h2>
+
+    <div class="grid">
+        {% for anime in top_anime %}
+        <a class="card" href="/anime/{{ anime.mal_id }}">
+            <img src="{{ anime.images.jpg.large_image_url }}" alt="{{ anime.title }}">
+            <h3>{{ anime.title }}</h3>
+            <p>⭐ {{ anime.score }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Infinity Anime Hub | Created by I.M.Kumar</p>
+</footer>
+
+</body>
+</html>

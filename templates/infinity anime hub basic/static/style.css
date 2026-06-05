@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #1d4ed8, transparent 35%),
+        radial-gradient(circle at bottom right, #7e22ce, transparent 35%),
+        #020617;
+    color: white;
+}
+
+a {
+    color: inherit;
+}
+
+.hero {
+    min-height: 420px;
+    background:
+        linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.9)),
+        url("https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    padding: 25px 60px;
+}
+
+nav,
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h2,
+.top-nav h2 {
+    color: #38bdf8;
+}
+
+nav a,
+.top-nav a {
+    text-decoration: none;
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid #38bdf8;
+    padding: 10px 18px;
+    border-radius: 999px;
+}
+
+.top-nav {
+    padding: 18px 55px;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid #1e293b;
+}
+
+.hero-content {
+    max-width: 760px;
+    margin-top: 70px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    color: #cbd5e1;
+    font-size: 20px;
+}
+
+.search-box {
+    margin-top: 30px;
+    display: flex;
+    max-width: 700px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 18px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 0 30px;
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-box.small {
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+.container h2,
+.container h1 {
+    margin-bottom: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+}
+
+.card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 12px 14px 0;
+    font-size: 17px;
+}
+
+.card p {
+    padding: 0 14px 12px;
+    color: #cbd5e1;
+}
+
+.empty {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+.details-container {
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 35px;
+}
+
+.poster img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
+}
+
+.info {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid #1e293b;
+    border-radius: 22px;
+    padding: 30px;
+}
+
+.info h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.japanese {
+    color: #94a3b8;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.stats span,
+.genres span {
+    padding: 10px 14px;
+    background: rgba(56, 189, 248, 0.13);
+    border: 1px solid #38bdf8;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.synopsis {
+    color: #e5e7eb;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+iframe {
+    width: 100%;
+    height: 420px;
+    border-radius: 18px;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(15, 23, 42, 0.95);
+    color: #94a3b8;
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .details-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero {
+        padding: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        padding: 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-nav {
+        padding: 16px 25px;
+    }
+}

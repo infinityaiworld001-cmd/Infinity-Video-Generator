@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ anime.title }} - Infinity Anime Hub</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <h2>∞ Infinity Anime Hub</h2>
+    <a href="/">Home</a>
+</nav>
+
+<section class="details-container">
+
+    <div class="poster">
+        <img src="{{ anime.images.jpg.large_image_url }}" alt="{{ anime.title }}">
+    </div>
+
+    <div class="info">
+        <h1>{{ anime.title }}</h1>
+        <p class="japanese">{{ anime.title_japanese }}</p>
+
+        <div class="stats">
+            <span>⭐ Score: {{ anime.score }}</span>
+            <span>🎬 Type: {{ anime.type }}</span>
+            <span>📺 Episodes: {{ anime.episodes }}</span>
+            <span>⏱ Duration: {{ anime.duration }}</span>
+        </div>
+
+        <h3>Genres</h3>
+        <div class="genres">
+            {% for genre in anime.genres %}
+            <span>{{ genre.name }}</span>
+            {% endfor %}
+        </div>
+
+        <h3>Synopsis</h3>
+        <p class="synopsis">{{ anime.synopsis }}</p>
+
+        {% if anime.trailer and anime.trailer.embed_url %}
+        <h3>Trailer</h3>
+        <iframe
+            src="{{ anime.trailer.embed_url }}"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+        {% endif %}
+    </div>
+
+</section>
+
+</body>
+</html>

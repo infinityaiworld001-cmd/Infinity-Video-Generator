@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search - Infinity Anime Hub</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav class="top-nav">
+    <h2>∞ Infinity Anime Hub</h2>
+    <a href="/">Home</a>
+</nav>
+
+<section class="container">
+    <h1>Search Results for "{{ query }}"</h1>
+
+    <form action="/search" method="get" class="search-box small">
+        <input type="text" name="q" value="{{ query }}" placeholder="Search anime...">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if anime_list %}
+    <div class="grid">
+        {% for anime in anime_list %}
+        <a class="card" href="/anime/{{ anime.mal_id }}">
+            <img src="{{ anime.images.jpg.large_image_url }}" alt="{{ anime.title }}">
+            <h3>{{ anime.title }}</h3>
+            <p>⭐ {{ anime.score }}</p>
+            <p>{{ anime.type }} | {{ anime.episodes }} Episodes</p>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty">No anime found. Try another search.</p>
+    {% endif %}
+</section>
+
+</body>
+</html>
