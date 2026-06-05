@@ -2,90 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Infinity AI Auto Animation Generator</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Infinity Invincible - One Piece Updates</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="app">
+<header class="hero">
+    <div class="hero-content">
+        <h1>INFINITY <span>INVINCIBLE</span></h1>
+        <p>One Piece Anime Updates • Manga News • Release Details</p>
+        <div class="hero-box">The Pirate King is waiting for One Piece Update! ⚓</div>
+    </div>
+</header>
 
-    <aside class="sidebar">
-        <div class="logo">∞ Infinity AI</div>
+<nav>
+    <a href="#">🏠 Home</a>
+    <a href="#">☠️ One Piece Anime Updates</a>
+    <a href="#">Anime</a>
+    <a href="#">Tech</a>
+    <a href="#">Python</a>
+    <a href="#">About</a>
+</nav>
 
-        <button class="new-btn" onclick="location.reload()">+ New Creation</button>
+<main class="container">
 
-        <h3>History</h3>
-        <div id="historyList" class="history-list">
-            <p class="empty">No videos generated yet</p>
+    <section class="main-card">
+        <div class="text-box">
+            <span class="tag">ONE PIECE ANIME UPDATES</span>
+            <h2>One Piece Anime Seasonal Format Explained 👑</h2>
+            <p class="sub">What fans should know about the new release style.</p>
+
+            <div class="meta">
+                <span>📅 May 23, 2026</span>
+                <span>👤 I.M.Kumar</span>
+                <span>📁 Anime Updates</span>
+                <span>⏱ 5 min read</span>
+            </div>
+
+            <p>
+                The One Piece anime is now moving toward a seasonal format.
+                This means fewer episodes per year, but better quality,
+                animation, and story pacing. Fans can expect a more polished
+                anime experience in the future.
+            </p>
+
+            <a class="btn" href="#article">📖 Read Full Article →</a>
         </div>
-    </aside>
 
-    <main class="main">
+        <div class="image-grid">
+            <img src="images/onepiece-crew.jpg" alt="One Piece Crew">
+            <img src="images/gear5-manga.jpg" alt="Gear 5 Luffy">
+        </div>
+    </section>
 
-        <section class="hero">
-            <div>
-                <h1>Auto Anime Video Generator</h1>
-                <p>Upload an image. The system detects the best effect and creates a cinematic video.</p>
-            </div>
+    <section class="topics">
+        <span>⭐ Topics Covered</span>
+        <span>Seasonal Format</span>
+        <span>Next Season</span>
+        <span>2027 Updates</span>
+        <span>Elbaph Arc</span>
+        <span>What to Expect</span>
+    </section>
 
-            <span class="badge">InfinityInvinciple Project</span>
-        </section>
+    <article id="article" class="article">
+        <h2>One Piece Anime Seasonal Format: Full Details</h2>
 
-        <section class="features">
-            <div>🔥 Auto Fire</div>
-            <div>💧 Auto Water</div>
-            <div>🌪 Auto Wind</div>
-            <div>⚡ Auto Lightning</div>
-            <div>❄ Auto Ice</div>
-            <div>🌑 Auto Dark</div>
-        </section>
+        <h3>Introduction</h3>
+        <p>
+            One Piece is one of the biggest anime series in the world. For many
+            years, fans watched the anime almost every week. Recently, the anime
+            release style has started changing, and many fans are asking whether
+            One Piece will continue as a seasonal anime.
+        </p>
 
-        <section class="studio">
+        <h3>What Is Changing?</h3>
+        <p>
+            The new release format gives the anime team more time to work on
+            episodes. Instead of continuously releasing episodes every week for
+            the whole year, the anime may follow a seasonal or cour-based style.
+            This can improve animation quality, pacing, and overall viewing
+            experience.
+        </p>
 
-            <div class="panel">
-                <h2>Create Auto Animation</h2>
+        <h3>Why Is This Good for Fans?</h3>
+        <p>
+            One Piece has a huge story with many emotional moments, battles, and
+            character developments. If the studio gets more time, important
+            scenes can look better and feel more powerful. This is especially
+            useful for major arcs and final saga moments.
+        </p>
 
-                <label for="imageInput" class="upload-box">
-                    <div class="upload-icon">🖼️</div>
-                    <h3>Upload Anime Image</h3>
-                    <p>JPG, JPEG, PNG supported</p>
-                </label>
+        <h3>2027 Updates</h3>
+        <p>
+            Fans are also waiting for future One Piece updates, including new
+            anime seasons, manga developments, and the separate remake project.
+            The year 2027 may become important for One Piece fans because more
+            projects and updates are expected around that period.
+        </p>
 
-                <input type="file" id="imageInput" accept="image/*" hidden>
+        <h3>What Fans Can Expect</h3>
+        <ul>
+            <li>Better animation quality</li>
+            <li>Improved episode pacing</li>
+            <li>More polished fight scenes</li>
+            <li>Breaks between seasons or cours</li>
+            <li>More hype for important story arcs</li>
+        </ul>
 
-                <img id="previewImage">
+        <h3>Conclusion</h3>
+        <p>
+            One Piece is still continuing strongly. The seasonal format can help
+            the anime deliver better quality episodes. For fans, this means the
+            wait may be longer, but the final result can be much more exciting.
+        </p>
+    </article>
 
-                <textarea id="promptBox" placeholder="Optional: Describe your scene ..."></textarea>
+</main>
 
-                <div class="auto-box">
-                    <strong>Auto Mode Enabled</strong>
-                    <p>The app detects the image color and applies the best animation effect.</p>
-                </div>
+<footer>
+    <p>© 2026 Infinity Invincible | Created by I.M.Kumar</p>
+</footer>
 
-                <button class="generate-btn" onclick="generateVideo()">Generate Auto Video</button>
-
-                <div id="loading"></div>
-            </div>
-
-            <div class="panel">
-                <h2>Video Preview</h2>
-
-                <div class="video-box">
-                    <video id="videoPlayer" controls></video>
-                    <p id="placeholder">Your generated video appears here</p>
-                </div>
-
-                <div id="detectedEffect"></div>
-
-                <a id="downloadBtn" download>Download Video</a>
-            </div>
-
-        </section>
-
-    </main>
-
-</div>
-
-<script src="/static/script.js"></script>
 </body>
 </html>
